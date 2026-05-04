@@ -1,3 +1,102 @@
 [
-  {"question": "hihi cả nhà tự tạo testset bằng cơm nhé", "ground_truth": "Không kịp tạo luôn"},
+  {
+    "question": "Thuế GTGT phải nộp trong kỳ Quý 4/2024 của DHA Surfaces là bao nhiêu?",
+    "ground_truth": "Thuế giá trị gia tăng còn phải nộp trong kỳ là 52.133.830 đồng. Thuế GTGT phát sinh trong kỳ là 129.511.633 đồng, sau khi trừ thuế GTGT còn được khấu trừ kỳ trước chuyển sang 77.377.803 đồng."
+  },
+  {
+    "question": "Tổng doanh thu bán hàng trong Quý 4/2024 của công ty DHA Surfaces là bao nhiêu?",
+    "ground_truth": "Tổng doanh thu hàng hóa, dịch vụ bán ra là 3.703.688.610 đồng với thuế GTGT là 344.675.400 đồng. Toàn bộ chịu thuế suất 10%."
+  },
+  {
+    "question": "Thuế GTGT của hàng hóa mua vào kỳ Quý 4/2024 của DHA Surfaces là bao nhiêu?",
+    "ground_truth": "Tổng số thuế GTGT của hàng hóa, dịch vụ mua vào là 132.327.910 đồng."
+  },
+  {
+    "question": "Trụ sở chính của Công ty Cổ phần Đá tự nhiên DHA Surfaces nằm ở đâu?",
+    "ground_truth": "Trụ sở chính đặt tại KCN Phố Nối A, Xã Lạc Đạo, Huyện Văn Lâm, Tỉnh Hưng Yên."
+  },
+  {
+    "question": "Doanh thu không chịu thuế của DHA Surfaces trong kỳ Quý 4/2024 là bao nhiêu?",
+    "ground_truth": "Doanh thu không chịu thuế (Mã 26) là 256.934.607 đồng."
+  },
+  {
+    "question": "Mã số thuế của công ty Cổ phần Đá tự nhiên DHA Surfaces là gì?",
+    "ground_truth": "Mã số thuế là 0901046182."
+  },
+  {
+    "question": "Dữ liệu cá nhân nhạy cảm bao gồm những loại thông tin nào theo Nghị định 13/2023?",
+    "ground_truth": "Dữ liệu cá nhân nhạy cảm bao gồm: quan điểm chính trị, tôn giáo; tình trạng sức khỏe; thông tin nguồn gốc chủng tộc, dân tộc; đặc điểm di truyền; đặc điểm sinh học; đời sống tình dục; dữ liệu về tội phạm; thông tin khách hàng tổ chức tín dụng; dữ liệu vị trí qua dịch vụ định vị."
+  },
+  {
+    "question": "Nghị định 13/2023 quy định những hành vi nào bị nghiêm cấm về bảo vệ dữ liệu cá nhân?",
+    "ground_truth": "Các hành vi bị nghiêm cấm gồm: xử lý dữ liệu cá nhân trái quy định pháp luật; xử lý dữ liệu để chống lại Nhà nước; tạo thông tin gây ảnh hưởng an ninh quốc gia; cản trở hoạt động bảo vệ dữ liệu của cơ quan thẩm quyền; lợi dụng bảo vệ dữ liệu để vi phạm pháp luật."
+  },
+  {
+    "question": "Dữ liệu cá nhân cơ bản theo Nghị định 13/2023 gồm những thông tin gì?",
+    "ground_truth": "Dữ liệu cá nhân cơ bản gồm: họ tên, ngày tháng năm sinh, giới tính, nơi sinh, nơi thường trú, quốc tịch, hình ảnh, số điện thoại, số CMND/CCCD, số hộ chiếu, số GPLX, mã số thuế, số BHXH, số thẻ BHYT, tình trạng hôn nhân, quan hệ gia đình, tài khoản số và lịch sử hoạt động trên mạng."
+  },
+  {
+    "question": "Bên Kiểm soát dữ liệu cá nhân là gì?",
+    "ground_truth": "Bên Kiểm soát dữ liệu cá nhân là tổ chức, cá nhân quyết định mục đích và phương tiện xử lý dữ liệu cá nhân."
+  },
+  {
+    "question": "Chủ thể dữ liệu có quyền gì đối với việc xử lý dữ liệu cá nhân của mình?",
+    "ground_truth": "Chủ thể dữ liệu có các quyền: được biết, đồng ý, truy cập, rút lại sự đồng ý, xóa dữ liệu, hạn chế xử lý, cung cấp dữ liệu, phản đối xử lý, khiếu nại tố cáo, yêu cầu bồi thường thiệt hại và tự bảo vệ."
+  },
+  {
+    "question": "Trường hợp nào có thể xử lý dữ liệu cá nhân mà không cần sự đồng ý của chủ thể?",
+    "ground_truth": "Có thể xử lý mà không cần đồng ý trong trường hợp khẩn cấp bảo vệ tính mạng sức khỏe; công khai dữ liệu theo luật; tình trạng khẩn cấp an ninh quốc gia, dịch bệnh; thực hiện nghĩa vụ hợp đồng; phục vụ hoạt động cơ quan nhà nước theo luật."
+  },
+  {
+    "question": "Xử lý dữ liệu cá nhân của trẻ em cần điều kiện gì?",
+    "ground_truth": "Phải có sự đồng ý của trẻ em (nếu từ đủ 7 tuổi trở lên) và sự đồng ý của cha, mẹ hoặc người giám hộ theo quy định pháp luật, trừ trường hợp không cần đồng ý theo Điều 17. Bên xử lý phải xác minh tuổi của trẻ em."
+  },
+  {
+    "question": "Thời hạn thông báo vi phạm quy định về bảo vệ dữ liệu cá nhân là bao lâu?",
+    "ground_truth": "Bên Kiểm soát dữ liệu cá nhân, Bên Kiểm soát và xử lý dữ liệu cá nhân phải thông báo cho Bộ Công an chậm nhất 72 giờ sau khi xảy ra hành vi vi phạm."
+  },
+  {
+    "question": "Cơ quan nào là Cơ quan chuyên trách bảo vệ dữ liệu cá nhân?",
+    "ground_truth": "Cơ quan chuyên trách bảo vệ dữ liệu cá nhân là Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao thuộc Bộ Công an."
+  },
+  {
+    "question": "Hồ sơ đánh giá tác động chuyển dữ liệu cá nhân ra nước ngoài phải nộp trong bao lâu?",
+    "ground_truth": "Hồ sơ phải được gửi tới Bộ Công an (Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao) trong thời gian 60 ngày kể từ ngày tiến hành xử lý dữ liệu cá nhân."
+  },
+  {
+    "question": "Chủ thể dữ liệu được yêu cầu hạn chế xử lý dữ liệu cá nhân trong bao lâu?",
+    "ground_truth": "Việc hạn chế xử lý dữ liệu được thực hiện trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu, với toàn bộ dữ liệu cá nhân mà chủ thể dữ liệu yêu cầu hạn chế."
+  },
+  {
+    "question": "Nghị định 13/2023/NĐ-CP có hiệu lực thi hành từ ngày nào?",
+    "ground_truth": "Nghị định này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2023."
+  },
+  {
+    "question": "Trách nhiệm chứng minh sự đồng ý của chủ thể dữ liệu thuộc về ai?",
+    "ground_truth": "Trong trường hợp có tranh chấp, trách nhiệm chứng minh sự đồng ý thuộc về Bên Kiểm soát dữ liệu cá nhân, Bên Kiểm soát và xử lý dữ liệu cá nhân."
+  },
+  {
+    "question": "Doanh nghiệp siêu nhỏ, nhỏ, vừa được ưu tiên gì theo Nghị định 13?",
+    "ground_truth": "Doanh nghiệp siêu nhỏ, nhỏ, vừa, khởi nghiệp được quyền lựa chọn miễn trừ quy định về chỉ định cá nhân và bộ phận bảo vệ dữ liệu cá nhân trong 02 năm đầu thành lập, trừ doanh nghiệp trực tiếp kinh doanh xử lý dữ liệu cá nhân."
+  },
+  {
+    "question": "Sự im lặng của chủ thể dữ liệu có được coi là sự đồng ý không?",
+    "ground_truth": "Sự im lặng hoặc không phản hồi của chủ thể dữ liệu không được coi là sự đồng ý."
+  },
+  {
+    "question": "Nếu muốn rút lại sự đồng ý thì hình thức thể hiện như thế nào?",
+    "ground_truth": "Việc rút lại sự đồng ý phải được thể hiện ở một định dạng có thể được in, sao chép bằng văn bản, bao gồm cả dưới dạng điện tử hoặc định dạng kiểm chứng được."
+  },
+  {
+    "question": "Khi có yêu cầu cung cấp dữ liệu từ chủ thể, bên xử lý có thời hạn bao lâu?",
+    "ground_truth": "Việc cung cấp dữ liệu cá nhân được thực hiện trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu, trừ trường hợp pháp luật có quy định khác."
+  },
+  {
+    "question": "Việc xóa dữ liệu cá nhân có được thực hiện ngay lập tức không?",
+    "ground_truth": "Việc xóa dữ liệu được thực hiện trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu với toàn bộ dữ liệu cá nhân thu thập được, trừ trường hợp pháp luật quy định khác."
+  },
+  {
+    "question": "Ghi âm ghi hình tại nơi công cộng có cần sự đồng ý không?",
+    "ground_truth": "Cơ quan, tổ chức có thẩm quyền được ghi âm, ghi hình tại nơi công cộng nhằm bảo vệ an ninh quốc gia, trật tự an toàn xã hội mà không cần có sự đồng ý của chủ thể, nhưng phải thông báo để chủ thể biết."
+  }
 ]

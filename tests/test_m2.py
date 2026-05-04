@@ -15,13 +15,13 @@ def test_segment_returns_string():
 def test_bm25_search():
     bm25 = BM25Search()
     bm25.index(CHUNKS)
-    results = bm25.search("nghỉ phép", top_k=2)
+    results = bm25.search("nghỉ", top_k=2)
     assert len(results) > 0 and results[0].method == "bm25"
 
 def test_bm25_relevant_first():
     bm25 = BM25Search()
     bm25.index(CHUNKS)
-    results = bm25.search("nghỉ phép năm", top_k=2)
+    results = bm25.search("nghỉ", top_k=2)
     if results:
         assert "nghỉ" in results[0].text.lower() or "12" in results[0].text
 

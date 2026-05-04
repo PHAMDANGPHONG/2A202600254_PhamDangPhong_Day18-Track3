@@ -9,7 +9,46 @@ from src.m2_search import HybridSearch
 from src.m3_rerank import CrossEncoderReranker
 from src.m4_eval import load_test_set, evaluate_ragas, failure_analysis, save_report
 from src.m5_enrichment import enrich_chunks
-from config import RERANK_TOP_K
+from config import RERANK_TOP_K, OPENAI_API_KEY
+
+
+def _generate_answer(query: str, contexts: list[str]) -> str:
+    """Generate answer using LLM based on retrieved contexts."""
+    context_str = "\n\n".join(contexts)
+    prompt = f"Context:\n{context_str}\n\nCâu hỏi: {query}"
+    system = "Trả lời câu hỏi CHỈ dựa trên context được cung cấp. Nếu context không chứa thông tin liên quan, trả lời 'Không tìm thấy thông tin trong tài liệu.' Trả lời ngắn gọn, chính xác bằng tiếng Việt."
+
+    api_key = OPENAI_API_KEY
+
+    # Try Google Gemini (if key starts with AIza)
+    if api_key and api_key.startswith("AIza"):
+        try:
+            import google.generativeai as genai
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel("gemini-2.0-flash")
+            response = model.generate_content(f"{system}\n\n{prompt}")
+            return response.text.strip()
+        except Exception as e:
+            print(f"    ⚠️ Gemini error: {e}")
+
+    # Try OpenAI
+    if api_key and api_key.startswith("sk-"):
+        try:
+            from openai import OpenAI
+            client = OpenAI()
+            resp = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": prompt},
+                ],
+            )
+            return resp.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"    ⚠️ OpenAI error: {e}")
+
+    # Fallback: return best context as answer
+    return contexts[0] if contexts else "Không tìm thấy thông tin."
 
 
 def build_pipeline():
@@ -57,16 +96,8 @@ def run_query(query: str, search: HybridSearch, reranker: CrossEncoderReranker) 
     reranked = reranker.rerank(query, docs, top_k=RERANK_TOP_K)
     contexts = [r.text for r in reranked] if reranked else [r.text for r in results[:3]]
 
-    # TODO (nhóm): Replace with LLM generation for better scores
-    # from openai import OpenAI
-    # client = OpenAI()
-    # context_str = "\n\n".join(contexts)
-    # resp = client.chat.completions.create(model="gpt-4o-mini", messages=[
-    #     {"role": "system", "content": "Trả lời CHỈ dựa trên context. Nếu không có → nói 'Không tìm thấy.'"},
-    #     {"role": "user", "content": f"Context:\n{context_str}\n\nCâu hỏi: {query}"},
-    # ])
-    # answer = resp.choices[0].message.content
-    answer = contexts[0] if contexts else "Không tìm thấy thông tin."
+    # Generate answer using LLM (Gemini or OpenAI)
+    answer = _generate_answer(query, contexts)
     return answer, contexts
 
 
